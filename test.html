@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changer la couleur d'un élément du tableau</title>
+    <style>
+        table {
+            /* width: 100%; */
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+            background-color: white; /* Cellules blanches par défaut */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .circular-button {
+        width: 50px;          /* Taille du bouton */
+        height: 50px;         /* Taille du bouton */
+        border-radius: 50%;    /* Pour le rendre circulaire */
+        /*background-color: #4CAF50;*/ /* Couleur de fond */
+        color: white;          /* Couleur du texte */
+        border: none;          /* Enlever les bordures */
+        font-size: 16px;       /* Taille du texte */
+        text-align: center;    /* Centrer le texte */
+        display: flex;         /* Utiliser flexbox */
+        justify-content: center; /* Centrer horizontalement */
+        align-items: center;   /* Centrer verticalement */
+        cursor: pointer;      /* Changer le curseur au survol */
+        transition: background-color 0.3s ease; /* Animation au survol */
+        }
+
+.circular-button:hover {
+    background-color: #45a049; /* Couleur du bouton au survol */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Boutons pour sélectionner la couleur -->
+    <table>
+        <tr>
+            <td>
+                <button class="circular-button" style="background-color: blue;" onclick="choisirCouleur('blue')"></button>
+            </td>
+            <td>
+                <button class="circular-button" style="background-color: red;" onclick="choisirCouleur('red')"></button>
+            </td>
+            <td>
+                <button class="circular-button" style="background-color: green;" onclick="choisirCouleur('green')"></button>
+            </td>
+            <td>
+                <button class="circular-button" style="background-color: yellow;" onclick="choisirCouleur('yellow')"></button>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td onclick="changerCouleur(this)"></td>
+            <td onclick="changerCouleur(this)"></td>
+            <td onclick="changerCouleur(this)"></td>
+            <td onclick="changerCouleur(this)"></td>
+        </tr>
+    </table>
+    <button onclick="validation(true)">Valider</button>
+    <script>
+        let couleurChoisie = null; // Couleur sélectionnée
+        let combinaison = [];
+        let combinaisonValid = [];
+
+        // Fonction pour sélectionner la couleur
+        function choisirCouleur(couleur) {
+            couleurChoisie = couleur;
+            console.log(couleurChoisie);
+        }
+        // Fonction pour changer la couleur de la cellule
+        function changerCouleur(cellule) {
+            if (couleurChoisie) {
+                cellule.style.backgroundColor = couleurChoisie; // Applique la couleur sélectionnée
+                console.log(couleurChoisie);
+            } else {
+                alert("Veuillez sélectionner une couleur d'abord.");
+            }
+        }
+        // Fonction pour valider le choix
+        function validation(etat) {
+            if (etat = true) {
+                let combinaisonValid = Array.from(combinaison);
+            }
+        }
+ 
+        if (combinaisonValid != null) {
+            alert("Devinez la combinaison")
+        }
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
